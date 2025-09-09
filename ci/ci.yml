@@ -1,6 +1,5 @@
 name: CI - Calculadora
 
-# Roda em qualquer push ou pull request, em qualquer branch
 on:
   push:
     branches: [ "**" ]
