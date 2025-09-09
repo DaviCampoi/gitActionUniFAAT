@@ -1,10 +1,11 @@
 name: CI - Calculadora
 
+# Roda em qualquer push ou pull request, em qualquer branch
 on:
   push:
-    branches: [ "**" ]   # roda em todas as branches
+    branches: [ "**" ]
   pull_request:
-    branches: [ "**" ]   # roda em todos os PRs
+    branches: [ "**" ]
 
 jobs:
   unit-test:
@@ -41,4 +42,4 @@ jobs:
           if [ -f tests/test_integration.py ]; then
             docker run python-app pytest tests/test_integration.py
           else
-            echo "Nenhum teste de integração de
+            echo "Nenhum teste de integração definido, pulando etapa"
